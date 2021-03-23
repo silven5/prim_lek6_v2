@@ -1,0 +1,59 @@
+//******************************************************
+// Like it if you like it :) Thank you
+//******************************************************
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=RocknRoll+One&display=swap');
+$color_buble:rgb(6,
+61,
+243);
+h1 {
+    margin-left: 20%;
+    font-family: 'Lobster', cursive;
+    font-size: 220%;
+    color: rgb(2, 38, 59);
+}
+
+.cont {
+    width: 100vw;
+    height: 20vh;
+    position: relative;
+    overflow: hidden;
+    border-top: 15px solid $color_buble;
+    border-bottom: 15px solid $color_buble;
+    border-radius: 10px;
+    filter: url("#goo");
+    .drip {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: rgb(20, 24, 41);
+        position: absolute;
+        top: -100%;
+        animation: falling 5s linear infinite;
+    }
+    @keyframes falling {
+        0% {
+            top: -100%;
+        }
+        50% {
+            top: 0%;
+        }
+        80% {
+            top: 80%;
+        }
+        100% {
+            top: 100%;
+        }
+    }
+    @for $i from 1 through 20 {
+        .drip:nth-child(#{$i}) {
+            border-color: $color_buble;
+            $size: random(40) + px;
+            height: $size;
+            width: $size;
+            animation-delay: -$i * 0.2s;
+            background: $color_buble;
+            left: random(90) + vh;
+            margin-left: 60px;
+        }
+    }
+}

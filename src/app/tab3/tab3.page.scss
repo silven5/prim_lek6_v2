@@ -1,0 +1,44 @@
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&family=RocknRoll+One&display=swap');
+    h1,
+    h2 {
+        margin-left: 20%;
+        font-family: 'Lobster', cursive;
+        font-size: 160%;
+        color: rgb(168, 219, 248);
+    }
+
+    .radio_title {
+        font-family: 'Lobster', cursive;
+        color: rgb(168, 219, 248);
+    }
+
+    svg {
+        //   width: 30%;
+        animation: rotate infinite linear;
+        mix-blend-mode: multiply;
+        //margin: 0 -8%;
+        position: absolute;
+        top: -20%;
+        z-index: 10;
+    }
+
+    .card_content {
+        position: relative;
+    }
+
+    .svg_tomato {
+        fill: tomato;
+        animation-duration: 4s;
+    }
+
+    .svg_gold {
+        fill: gold;
+        animation-duration: 2s;
+        animation-direction: reverse;
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg)
+        }
+    }

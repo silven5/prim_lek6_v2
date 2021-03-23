@@ -1,17 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <app-my-header></app-my-header>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-card>
+        <ion-card-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+            <ion-card-title>
+                🎂 Birthdays 🎉
+            </ion-card-title>
+
+
+
+
+        </ion-card-header>
+        <ion-button (click)="showDetail(birthdays)">Додати день народження
+            <ion-icon name="add"> </ion-icon>
+        </ion-button>
+        <!--
+        <ion-list inset>
+            <ion-item *ngFor="let birthday of birthdays | async" (click)="showDetail(birthday)">
+                <div item-left>{{ birthday.Name }}</div>
+                <div item-right>{{ birthday.Date | date:'yMMMMd' }}</div>
+            </ion-item>
+        </ion-list>
+        -->
+    </ion-card>
 </ion-content>
